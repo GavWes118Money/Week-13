@@ -5,5 +5,5 @@
 document.title = "Web interaction";
 
 const Title = document.getElementById("title")
-const Button = document.getElementById()
+const Button = document.getElementById("changeBtn")
 
