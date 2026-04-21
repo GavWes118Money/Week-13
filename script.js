@@ -9,7 +9,7 @@ const Button = document.getElementById("changeBtn")
 const Button = document.getElementById("toggleImage")
 const Button = document.getElementById("dark Mode")
 
-button.addEventlistener("click", () => {
+button.addEventlistener('click', function() => {
   title.textContent = "Reorganizing Properties";
   title.style.color = "blue";
 })
