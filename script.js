@@ -6,7 +6,7 @@ document.title = "Web interaction";
 
 const Title = document.getElementById("title")
 const Button = document.getElementById("changeBtn")
-const Button = document.getElementById("toggleimage")
+const Button = document.getElementById("toggleImage")
 const Button = document.getElementById("dark Mode")
 
 button.addEventlistener("click", () => {
