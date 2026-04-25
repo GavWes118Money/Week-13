@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Add a click event listener to the button
             buttonElement.addEventListener("click", function () {
                 // Change the text content of the paragraph
-                titleElement.textContent = "The text has been changed!";
+                titleElement.textContent = "Title Sucessfully Changed!";
                 // Change the color
                 titleElement.style.color = "green";
             });
@@ -19,34 +19,36 @@ document.addEventListener("DOMContentLoaded", function () {
     let showingFirst = true;
 
     function toggleImage() {
-        const imgElement = document.getElementById("toggleImage");
-        showingFirst = !showingFirst;
-        imgElement.style.opacity = 0; // fade out
-
-        setTimeout(() => {
-            imgElement.src = showingFirst ? image1 : image2;
-            imgElement.style.opacity = 1; // fade in
-        }, 300);
+      const imgElement = 
+document.getElementById("toggleImage");
+      showingFirst = !showingFirst;
+      imgElement.style.opacity = 0;
+      
+     setTimeout (() => {
+       imgElement.src = showingFirst ? image1 : image2;
+       imgElement.style.opacity = 1;
+     }, 300) 
     }
+
 
 const toggleButton = document.getElementById('toggleDarkMode');
-    const body = document.body;
+const body = document.body;
 
-    // Load saved theme from localStorage
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-        toggleButton.textContent = 'Disable Dark Mode';
-    }
+// Load saved theme from localStorage
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark-mode');
+  toggleButton.textContent = 'Disable Dark Mode';
+}
 
-    toggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-
-        // Update button text
-        if (body.classList.contains('dark-mode')) {
-            toggleButton.textContent = 'Disable Dark Mode';
-            localStorage.setItem('theme', 'dark');
-        } else {
-            toggleButton.textContent = 'Enable Dark Mode';
-            localStorage.setItem('theme', 'light');
-        }
-    });
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  // Update button text
+  if (body.classList.contains('dark-mode')) {
+    toggleButton.textContent = 'Disable Dark Mode';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    toggleButton.textContent = 'Enable Dark Mode';
+    localStorage.setItem('theme', 'light');
+  }
+});
